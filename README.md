@@ -1,39 +1,31 @@
 # DataPipeline
 
-Базовый проект для разработки и запуска data pipeline.
+A robust ELT data pipeline for ingesting, transforming, and observing financial market data.
 
-## Требования
+## Prerequisites
 
 - Python 3.11+
-- Docker Desktop с Docker Compose
+- Docker Desktop with Docker Compose
 
-## Установка
+## Getting Started
 
-1. Создайте виртуальное окружение:
+1. Create and activate a virtual environment:
 
    ```powershell
    python -m venv .venv
    .\.venv\Scripts\Activate.ps1
-   ```
 
-2. Установите зависимости:
-
-   ```powershell
+2. Install dependencies:
+   ```PowerShell
    pip install -r requirements.txt
-   ```
 
-3. Запустите локальную базу данных:
-
-   ```powershell
+3. Spin up the local database container:
+   ```PowerShell
    docker compose up -d
-   ```
 
-Переменные окружения храните в `.env`. Файл `.env.example` используйте как шаблон, если он добавлен в проект.
+## Teardown
 
-## Остановка
+Stop the running services:
 
 ```powershell
 docker compose down
-```
-
-Для удаления данных локальной базы используйте `docker compose down -v`.
